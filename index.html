@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Airdrop & Price Prediction</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Airdrop & Price Prediction</h1>
+        <div class="menu">
+            <button onclick="showSection('airdrop')">🎁 Airdrop Allocation</button>
+            <button onclick="showSection('predict')">📈 Price Forecast</button>
+        </div>
+
+        <div id="airdrop" class="section hidden">
+    <h2>🎁 Calculate Airdrop Allocations</h2>
+    <div class="form-group">
+        <label for="totalTokens">Total Tokens:</label>
+        <input type="number" id="totalTokens" placeholder="Input total tokens">
+    </div>
+    <div class="form-group">
+        <label for="percentageCommunity">Percentage for Communities (%):</label>
+        <input type="number" id="percentageCommunity" placeholder="Input community percentage">
+    </div>
+    <div class="form-group">
+        <label for="totalParticipants">Total Participants:</label>
+        <input type="number" id="totalParticipants" placeholder="Enter total number of participants">
+    </div>
+    <button class="calculate-btn" onclick="calculateAirdrop()">Calculate</button>
+    <p id="airdropResult"></p>
+</div>
+
+
+        <div id="predict" class="section hidden">
+            <h2>📈 Initial Listing Price Forecast</h2>
+            <label>Market Cap (USD):</label>
+            <input type="number" id="marketCap" placeholder="Input Market Cap">
+            <label>Total Supply:</label>
+            <input type="number" id="totalSupply" placeholder="Input total supply">
+            <button class="calculate-btn" onclick="predictPrice()">Calculate</button>
+            <p id="predictResult"></p>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
